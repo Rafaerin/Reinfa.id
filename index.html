@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <style>
+.oswalduniquifier {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.gradient-background {
+  /* background: linear-gradient(300deg, #3cc0e9, #161314, #f518eae5); */
+  background: linear-gradient(360deg, #FFB7C5, #FFC1CC, #FFD9E2, #FFFFFF, #8B5A2B);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+.navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.navbar-menu a:hover {
+    background-color: #555;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin-bottom: 4px;
+    transition: 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-menu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        display: none;
+    }
+
+    .navbar-menu li {
+        margin: 0;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+}
+
+.navbar-menu.active {
+    display: flex;
+}
+
+
+.grid-3{
+display: grid;
+grid-template-columns:none(auto-fit, minmax(250px, 1fr));   
+gap: 3rem;
+
+
+}
+
+.carousel-item img {
+            width: 50%; /* Adjust the width to 50% */
+            margin: 0 auto; /* Center the image */
+        }
+
+
+    </style>
+      
+</head>
+<body class ="gradient-background">
+    
+    <div class="container1 text-center  justify-center ">
+        <nav class="navbar">
+            <div class="navbar-brand">Daniel Raharja</div>
+            <div class="navbar-toggle" id="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navbar-menu" id="navbar-menu">
+         <a href="#About" class="font-medium px-4 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900 ">About</a>
+          <a href="#Contact" class="font-medium px-4 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900 ">Contact</a>
+          <a href="#Project" class="font-medium px-4 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900 ">Project</a>
+          <a href="#Gallery" class="font-medium px-4 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900 ">Gallery</a>
+          <a href="#Founder" class="font-medium px-4 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900 ">Founder</a>
+            </ul>
+        </nav>
+        </div>
+        <h1 class="text-4xl text-center mb-3 mt-3 font-semibold">Hello, Welcome To My Page</h1>
+        <div class="profile flex justify-center items-center ">
+<span href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 text-center">
+    <img class=" object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src=".//Foto/download/865454.jpg" alt="">
+    
+    <div class="flex flex-col justify-between p-4 leading-normal">
+        <h5 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Daniel Raharja</h5>
+        <p class="mb-3 font-extralight text-gray-700 dark:text-gray-400">I do what i like, and try to make something feel better else i will leave it <br>but if it was the important thing i must do it</p>
+    </div>
+</span>
+</div>
+<section id ="About"></section>
+<div class="Why text-center font-extralight mt-5">
+    <p class="text-4xl bg-violet-200 rounded-md inline-block ">About My Hobby
+    </p>
+</div>
+
+<div class="gamelogo p-10 flex gap-9  justify-center">
+
+<figure style ="text-align :center;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="currentColor" class="bi bi-steam" viewBox="0 0 16 16">
+    <path d="M.329 10.333A8.01 8.01 0 0 0 7.99 16C12.414 16 16 12.418 16 8s-3.586-8-8.009-8A8.006 8.006 0 0 0 0 7.468l.003.006 4.304 1.769A2.2 2.2 0 0 1 5.62 8.88l1.96-2.844-.001-.04a3.046 3.046 0 0 1 3.042-3.043 3.046 3.046 0 0 1 3.042 3.043 3.047 3.047 0 0 1-3.111 3.044l-2.804 2a2.223 2.223 0 0 1-3.075 2.11 2.22 2.22 0 0 1-1.312-1.568L.33 10.333Z"/>
+    <path d="M4.868 12.683a1.715 1.715 0 0 0 1.318-3.165 1.7 1.7 0 0 0-1.263-.02l1.023.424a1.261 1.261 0 1 1-.97 2.33l-.99-.41a1.7 1.7 0 0 0 .882.84Zm3.726-6.687a2.03 2.03 0 0 0 2.027 2.029 2.03 2.03 0 0 0 2.027-2.029 2.03 2.03 0 0 0-2.027-2.027 2.03 2.03 0 0 0-2.027 2.027m2.03-1.527a1.524 1.524 0 1 1-.002 3.048 1.524 1.524 0 0 1 .002-3.048"/>
+  </svg>
+  <figcaption>Steam</figcaption>
+  <p></p>
+</figure>
+
+
+
+  <figure style ="text-align :center;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="currentColor" class="bi bi-spotify" viewBox="0 0 16 16">
+    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288"/>
+  </svg>
+  <figcaption>Spotify</figcaption>
+</figure>
+  <figure style ="text-align :center;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
+    <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5z"/>
+    <path d="M2 3h10v2H2zm0 3h4v3H2zm0 4h4v1H2zm0 2h4v1H2zm5-6h2v1H7zm3 0h2v1h-2zM7 8h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2z"/>
+    
+  </svg>
+  <figcaption>Article</figcaption>
+</figure>
+</div>
+<hr>
+<div class="Why text-center font-extralight">
+    <p class="text-4xl bg-violet-200 rounded-md inline-block">Game
+        <p class="text-center text-2xl">Saat menduduki bangku SD saya gemar dalam bermain game atau bisa disebut dengan adiksi yang <br> sangat tinggi karena disaat itu saya banyak menghabisi hampir 80% aktivitas keseluruhan dengan bermain game</p>
+    </p>
+</div>
+
+
+
+
+
+
+<!-- !! -->
+
+<!-- <div class="containerHobby justify-center text-center flex">
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="rounded-t-lg" src="./Foto/download/csgofb_image.png" alt="" />
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Counter Strike Global Offensive</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Merupakan salah satu game yang sangat saya gemari selama bertahun tahun sampai detik ini saya masih memainkan nya meskipun sudah tidak seintens dulu</p>
+        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Read more
+             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+        </a>
+    </div>
+
+    
+
+</div>
+</div> -->
+
+<!-- !!! -->
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="#">
+                            <img src="./Foto/download/csgofb_image.png" class="d-block w-100" alt="Counter Strike Global Offensive">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block text-center">
+                            <h5 class ="bg-black">Counter Strike Global Offensive</h5>
+                            <!-- <p>Merupakan salah satu game yang sangat saya gemari selama bertahun tahun sampai detik ini saya masih memainkan nya meskipun sudah tidak seintens dulu.</p> -->
+                            <!-- <a href="#" class="btn btn-primary">Read more</a> -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#">
+                            <img src="./Foto/download/k-1920x1080-featured-image.jpg.adapt.crop191x100.1200w.jpg" class="d-block w-100" alt="Another Game">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block text-center">
+                            <h5 class ="bg-black">Battlefield 2042</h5>
+                            <!-- <p>Saya sangat menyukai game ini terutama dengan mode single player dengan bermain bersama bot</p> -->
+                            <!-- <a href="#" class="btn btn-primary">Read more</a> -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#">
+                            <img src="./Foto/download/Osu.jpg" class="d-block w-100" alt="Yet Another Game">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block text-center">
+                            <h5 class="bg-black"></h5>
+                            <!-- <p>Game ketiga ini menawarkan pengalaman berbeda dengan fitur-fitur inovatif yang membuatnya menonjol.</p> -->
+                            <!-- <a href="#" class="btn btn-primary">Read more</a> -->
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p class ="text-center font-extralight mt-4">saya cukup puas dengan bermain game, sebagai pelarian agar dapat menikmati hidup dengan damai <br> daripada saya melakukan hal yang tidak-tidak lalu kembali ke kewajiban disaat waktu bermain usai</p>
+
+
+
+<!-- ini berbeda !!! -->
+<hr>
+<div class="Why text-center font-extralight">
+    <p class="text-4xl bg-violet-200 rounded-md inline-block">Music
+        <p class="text-center text-2xl font-extralight">Saya sangat senang dalam mendengar music meliputi genre japan pop , chinese pop dan lain-lain</p>
+    </p>
+</div>
+
+
+
+
+
+<!-- <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="rounded-t-lg" src="./Foto/download/Customed Album for me.jpeg" alt="" />
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Beberapa Musik yang disukai</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Perpaduan Antara Chinese, Japan , Korea Music adalah hal yang sangat saya sukai</p>
+        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Read more
+             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+        </a>
+    </div>
+</div> -->
+
+
+<div class="album flex justify-center">
+<a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src=".//Foto/download/Customed Album for me.jpeg" alt="">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Chinese, Japanese And Korean Is Dominate</h5>
+        <p class="mb-3 font-extralight text-gray-700 dark:text-gray-400">Spotify merupakan platform yang paling banyak saya gunakan, terkadang soundcloud juga bisa menjadi opsi untuk saya</p>
+    </div>
+</a>
+</div>
+
+
+<!-- !!! -->
+<hr>
+
+
+<div class="Why text-center font-extralight mb-3">
+    <p class="text-4xl bg-violet-200 rounded-md inline-block">Artikel/Berita
+        <p class="text-center text-2xl font-extralight">Saya sangat menyukai dalam membaca berita terutama dalam perkembangan teknologi dan inovasi terhadap masing masing produsen
+            komponen perangkat berbasis komputer karena dengan ada nya ini maka pergerakan dari dunia dapat dilihat sampai dimana perkembangan nya</p>
+    </p>
+</div>
+
+
+<div id="animation-carousel" class="relative w-full" data-carousel="static">
+    <!-- Carousel wrapper -->
+    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+         <!-- Item 1 -->
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
+            <img src=".//np_file_23908.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
+            <img src=".//Foto/download/TSMC-3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-200 ease-linear" data-carousel-item="active">
+            <img src=".//Foto/download/post_1844_1711092551.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+    </div>
+    <!-- Slider controls -->
+    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+
+<hr>
+<section id ="Contact"></section>
+<div class="Why text-center font-extralight mb-3">
+    <p class="text-4xl bg-violet-200 rounded-md inline-block">Contact
+        <p class="text-center text-2xl font-extralight">Kontak saya dibawah ini</p>
+    </p>
+
+    
+</div>
+
+
+<div class="gamelogo p-10 flex gap-9  justify-center">
+
+    <!-- <figure style ="text-align :center;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+          </svg>
+      <figcaption>Whatsapp</figcaption>
+      <p></p>
+    </figure> -->
+    
+
+    <figure style="text-align:center;">
+        <a href="https://wa.me/6282297329896" target="_blank" style="text-decoration:none; color:inherit;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+            </svg>
+            <figcaption>Whatsapp</figcaption>
+        </a>
+        <p></p>
+    </figure>
+    
+    <figure style="text-align:center;">
+        <a href="mailto:danielraharjalim5@gmail.com" target="_blank" style="text-decoration:none; color:inherit;">
+            <!-- Gmail Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm13.438 0L8 8.634 2.563 4h10.875zM1.5 5.684V12h13V5.684L8 10.317 1.5 5.684z"/>
+            </svg>
+            <!-- Caption -->
+            <figcaption>Email</figcaption>
+        </a>
+        <p></p>
+    </figure>
+
+    <figure style="text-align:center;">
+        <a href="https://www.instagram.com/niel.raharja" target="_blank" style="text-decoration:none; color:inherit;">
+            <!-- Instagram Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+              </svg>
+            <!-- Caption -->
+            <figcaption>Instagram</figcaption>
+        </a>
+    </figure>
+    
+    <hr>
+    </div>
+
+<!-- Bagian Project -->
+    <hr>
+    <section id ="Project"></section>
+    <div class="Why text-center font-extralight mb-3">
+        <p class="text-4xl bg-violet-200 rounded-md inline-block">Project
+            <p class="text-center text-2xl font-extralight">Beberapa hal yang pernah saya lewati</p>
+        </p>
+    
+        
+    </div>
+        <hr>
+<ol class="relative border-s border-gray-200 dark:border-gray-700 text-center">                  
+    <li class="mb-10 ms-4">
+        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Oktober 2023</time>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Penelitian TKDN</h3>
+        <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Tingkat Komponen Dalam Negeri adalah karya tulis yang pernah saya buat pada saat masih menduduki bangku SMA Kelas 12 </p>
+        <!-- <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Learn more <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"> -->
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+  </svg></a>
+    </li>
+    <hr>
+    <li class="mb-10 ms-4">
+        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Desember 2023</time>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Portofolio Website Pertama</h3>
+        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Dapat Dilihat di link dibawah ini</p>
+        <a href="https://rafaerin.github.io/Portofolio/#" target="_blank" style="text-decoration:none; color:inherit;">
+            <p class="font-bold text-1xl">https://rafaerin.github.io/Portofolio/#</p>
+        <a>
+    </li>
+    <hr>
+    <li class="mb-10 ms-4">
+        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Mei 2024</time>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Website Toko Online</h3>
+        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Dapat Dilihat di link dibawah ini</p>
+        <a href="https://rafaerin.github.io/Surya-Toko/#Produk target="_blank" style="text-decoration:none; color:inherit;">
+            <p class="font-bold text-1xl">https://rafaerin.github.io/Surya-Toko/#Produk</p>
+        <a>
+    </li>
+</ol>
+
+
+<!-- Bagian Project -->
+
+<!-- Bagian Galeri -->
+
+
+<hr>
+<section id ="Gallery"></section>
+
+<div class="bg-white border border-gray-200 rounded-lg shadow-md max-w-lg mx-auto p-4 text-center">
+    <h2 class="text-4xl font-bold mb-4 text-center bg-violet-200 inline-block">Gallery</h2>
+    <div class="grid grid-cols-3 gap-4">
+        <div class="w-full h-32 bg-gray-300 rounded-md">
+            <img src="./IMG-20240809-WA0014.jpg" alt="Gallery Image 1" class="w-full h-full object-cover rounded-md">
+        </div>
+        <div class="w-full h-32 bg-gray-300 rounded-md">
+            <img src="./IMG-20240809-WA0015.jpg" alt="Gallery Image 2" class="w-full h-full object-cover rounded-md">
+        </div>
+        <div class="w-full h-32 bg-gray-300 rounded-md">
+            <img src="./IMG-20240809-WA0016.jpg" alt="Gallery Image 3" class="w-full h-full object-cover rounded-md">
+        </div>
+        <div class="w-full h-32 bg-gray-300 rounded-md">
+            <img src="./IMG-20240809-WA0017.jpg" alt="Gallery Image 4" class="w-full h-full object-cover rounded-md">
+        </div>
+        <div class="w-full h-32 bg-gray-300 rounded-md">
+            <img src="./IMG-20240809-WA0018.jpg" alt="Gallery Image 5" class="w-full h-full object-cover rounded-md">
+        </div>
+        <div class="w-full h-32 bg-gray-300 rounded-md">
+            <img src="./IMG-20240809-WA0019.jpg" alt="Gallery Image 6" class="w-full h-full object-cover rounded-md">
+        </div>
+        <div class="w-full h-32 bg-gray-300 rounded-md">
+            <img src="./IMG-20240809-WA0020.jpg" alt="Gallery Image 7" class="w-full h-full object-cover rounded-md">
+        </div>
+        <div class="w-full h-32 bg-gray-300 rounded-md">
+            <img src="./IMG-20240809-WA0021.jpg" alt="Gallery Image 8" class="w-full h-full object-cover rounded-md">
+        </div>
+        <div class="w-full h-32 bg-gray-300 rounded-md">
+            <img src="./IMG-20240809-WA0022.jpg" alt="Gallery Image 9" class="w-full h-full object-cover rounded-md">
+        </div>
+    </div>
+</div>
+
+<!-- Bagian Galeri -->
+<hr>
+
+<!-- bagian founder -->
+<section id ="Founder"></section>
+<div class="Why text-center font-extralight mb-3">
+    <p class="text-4xl bg-violet-200 rounded-md inline-block">Founder
+        <p class="text-center text-2xl font-extralight">Tentang Saya sebagai founder dari Halaman ini</p>
+    </p>
+    <hr>
+<div class="container col-xxl-8 px-4 py-5 gradient-background">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="./Foto/download/my pfp.jpeg" class="d-block mx-lg-auto img-fluid pb-14" alt="App Demo" height="200" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Daniel Raharja</h1>
+        <p class="lead "><h2>Less Motivate Keep Discipline<br>
+            <br>Do More And Less Talk Just Talk Important Thing If The Situation Is Seriously<br>
+            <br>
+</p> 
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- bagian founder -->
+
+
+
+        <div class="clock text-4xl text-center">
+            <div id="clock">00:00:00</div>
+            </div>
+
+            <hr>
+            <footer class ="text-center text-violet-200 bg-black">Copyright Daniel Raharja 2024</footer>
+
+            
+            <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+            function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+
+        // Initial call to set the clock when the page loads
+        updateClock();
+
+        document.addEventListener("DOMContentLoaded", () => {
+    const navbarToggle = document.getElementById("navbar-toggle");
+    const navbarMenu = document.getElementById("navbar-menu");
+
+    navbarToggle.addEventListener("click", () => {
+        navbarMenu.classList.toggle("active");
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+        const carouselElement = document.getElementById('animation-carousel');
+        const carousel = new Carousel(carouselElement, {
+            interval: 5000,
+            indicators: {
+                activeIndicator: 'bg-white',
+                indicator: 'bg-gray-400'
+            }
+        });
+
+        // Custom styles
+        const items = carouselElement.querySelectorAll('[data-carousel-item]');
+        items.forEach(item => {
+            item.style.width = '50%';
+            item.style.margin = '0 auto';
+        });
+
+        // Change active slide atau mengubah slide aktif (biar ga lupa)
+        carousel.to(2); // Change to the 3rd slide
+
+        // Callback functions atau memanggil fungsi (ingatin kalau begini)
+        carouselElement.addEventListener('slide.bs.carousel', function (event) {
+            console.log('Slide event:', event);
+        });
+    });
+
+</script>
+
+
+
+</body>
+</html>
