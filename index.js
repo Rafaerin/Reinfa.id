@@ -78,3 +78,4 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('Slide event:', event);
     });
 });
+  
