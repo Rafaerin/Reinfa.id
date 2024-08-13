@@ -34,3 +34,54 @@ const now = new Date();
       }
 
       document.getElementById("greeting").textContent = greeting;
+
+      function updateClock() {
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+
+        const timeString = `${hours}:${minutes}:${seconds}`;
+        document.getElementById('clock').textContent = timeString;
+    }
+
+    // Update the clock every second
+    setInterval(updateClock, 1000);
+
+    // Initial call to set the clock when the page loads
+    updateClock();
+
+    document.addEventListener("DOMContentLoaded", () => {
+const navbarToggle = document.getElementById("navbar-toggle");
+const navbarMenu = document.getElementById("navbar-menu");
+
+navbarToggle.addEventListener("click", () => {
+    navbarMenu.classList.toggle("active");
+});
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const carouselElement = document.getElementById('animation-carousel');
+    const carousel = new Carousel(carouselElement, {
+        interval: 5000,
+        indicators: {
+            activeIndicator: 'bg-white',
+            indicator: 'bg-gray-400'
+        }
+    });
+
+    // Custom styles
+    const items = carouselElement.querySelectorAll('[data-carousel-item]');
+    items.forEach(item => {
+        item.style.width = '50%';
+        item.style.margin = '0 auto';
+    });
+
+    // Change active slide atau mengubah slide aktif (biar ga lupa)
+    carousel.to(2); // Change to the 3rd slide
+
+    // Callback functions atau memanggil fungsi (ingatin kalau begini)
+    carouselElement.addEventListener('slide.bs.carousel', function (event) {
+        console.log('Slide event:', event);
+    });
+});
