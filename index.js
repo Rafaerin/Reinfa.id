@@ -51,14 +51,7 @@ const now = new Date();
     // Initial call to set the clock when the page loads
     updateClock();
 
-    document.addEventListener("DOMContentLoaded", () => {
-const navbarToggle = document.getElementById("navbar-toggle");
-const navbarMenu = document.getElementById("navbar-menu");
-
-navbarToggle.addEventListener("click", () => {
-    navbarMenu.classList.toggle("active");
-});
-});
+    
 
 document.addEventListener('DOMContentLoaded', function () {
     const carouselElement = document.getElementById('animation-carousel');
